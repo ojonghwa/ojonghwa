@@ -36,6 +36,7 @@ dependencies {
 
     compile('org.springframework.boot:spring-boot-starter-data-jpa')    //p86
     compile('com.h2database:h2')
+    compile('org.mariadb.jdbc:mariadb-java-client')     //p309
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')   //p179
     compile('org.springframework.boot:spring-boot-starter-mustache')    //p131
     compile('org.springframework.session:spring-session-jdbc')    //p202
