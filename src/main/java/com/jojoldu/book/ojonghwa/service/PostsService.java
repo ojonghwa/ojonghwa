@@ -13,9 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@RequiredArgsConstructor
+@RequiredArgsConstructor    // p106, final 선언된 모든 필드를 인자값으로 하는 생성자를 자동 생성
 @Service
 public class PostsService {
+
     private final PostsRepository postsRepository;
 
     @Transactional

@@ -17,15 +17,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@RunWith(SpringRunner.class)
 @WebMvcTest(controllers = HelloController.class,
         excludeFilters = {
-        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
-    }
+                @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)
+        }
 )
-public class HelloControllerTest {      //p62
+public class HelloControllerTest {
 
     @Autowired
-    private MockMvc mvc;    // Web API test class
+    private MockMvc mvc;
 
     @WithMockUser(roles="USER")
     @Test
@@ -33,7 +34,7 @@ public class HelloControllerTest {      //p62
         String hello = "hello";
 
         mvc.perform(get("/hello"))
-                .andExpect(status().isOk())     // HTTP Header 200
+                .andExpect(status().isOk())
                 .andExpect(content().string(hello));
     }
 
@@ -45,10 +46,11 @@ public class HelloControllerTest {      //p62
 
         mvc.perform(
                 get("/hello/dto")
-                .param("name", name)
-                .param("amount", String.valueOf(amount)))
+                        .param("name", name)
+                        .param("amount", String.valueOf(amount)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is(name)))
                 .andExpect(jsonPath("$.amount", is(amount)));
     }
 }
+

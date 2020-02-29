@@ -1,4 +1,5 @@
 package com.jojoldu.book.ojonghwa.domain.posts;
+
 import com.jojoldu.book.ojonghwa.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
@@ -14,6 +15,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 public class Posts extends BaseTimeEntity {    //p88
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
