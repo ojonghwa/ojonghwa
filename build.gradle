@@ -29,11 +29,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')     //p67
 
-  //  gradle 버전이 5.* 일 경우
-  //  testCompile "org.projectlombok:lombok"
-  //  annotationProcessor('org.projectlombok:lombok')
-  //  testAnnotationProcessor('org.projectlombok:lombok')
-
     compile('org.springframework.boot:spring-boot-starter-data-jpa')    //p86
     compile('org.springframework.boot:spring-boot-starter-mustache')    //p131
     compile('com.h2database:h2')
