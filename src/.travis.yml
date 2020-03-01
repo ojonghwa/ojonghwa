@@ -14,11 +14,8 @@ cache:
 
 script: "./gradlew clean build"
 
-
-
-
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
     recipients:
-      - ojonghwa@gmail.com
+      - ojonghwa@naver.com
