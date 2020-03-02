@@ -13,10 +13,10 @@ cache:
     - '$HOME/.gradle'
 
 
-before_install: "git update-index --chmod=+x gradlew"
 
-
-script: "./gradlew clean build"
+script:
+  "git update-index --chmod=+x gradlew"
+  "./gradlew clean build"
 
 # CI 실행 완료시 메일로 알람
 notifications:
