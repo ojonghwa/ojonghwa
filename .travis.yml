@@ -23,4 +23,5 @@ script:
 notifications:
   email:
     recipients:
-      - ojonghwa@naver.com
+      - ojonghwa@gmail.com
+
