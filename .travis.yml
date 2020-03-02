@@ -23,7 +23,7 @@ script:
 before_deploy:
   - zip -r ojonghwa *
   - mkdir -p deploy
-  - mv ojonghwa.zip deploy/ojonghwa.zip
+  - mv ojonghwa.zip deploy/ojonghwa-webservice.zip
 
 
 deploy:
