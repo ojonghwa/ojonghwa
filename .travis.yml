@@ -12,8 +12,9 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-before_install:
-  - chomod +x gradlew
+
+before_install: "git update-index --chmod=+x gradlew"
+
 
 script: "./gradlew clean build"
 
