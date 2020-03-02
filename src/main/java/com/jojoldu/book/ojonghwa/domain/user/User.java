@@ -1,7 +1,6 @@
 package com.jojoldu.book.ojonghwa.domain.user;
 
 import com.jojoldu.book.ojonghwa.domain.BaseTimeEntity;
-import com.jojoldu.book.ojonghwa.domain.user.Role;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
